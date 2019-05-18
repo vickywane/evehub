@@ -3,7 +3,11 @@ import Link from 'next/link';
 import styled from 'styled-components';
 import { media } from '../media_style';
 import Img from 'react-image';
+
 import Spinner from '../../components/spinner';
+import Update from '.././updates/update';
+import Blog from '.././updates/blog';
+import Message from './message';
 
 export default class Home extends Component {
 	render() {
@@ -169,7 +173,15 @@ export default class Home extends Component {
 						</Contain>
 					</Link>{' '}
 					<hr />
+					<Blog />
 				</Div>
+				<div>
+					<Update />
+				</div>
+
+				<div>
+					<Message />
+				</div> <br /> <br />
 			</div>
 		);
 	}

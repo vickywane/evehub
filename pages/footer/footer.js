@@ -13,7 +13,7 @@ export default class Home extends Component {
 		`;
 
 		const Div = styled.div`
-			background: #30f85b;
+			background: #000428;
 			line-height: 1.15;
 			height: 250px;
 			width: 100%;
