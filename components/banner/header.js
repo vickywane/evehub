@@ -1,5 +1,4 @@
 import React from 'react';
-
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -8,6 +7,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Link from 'next/link';
 import Img from 'react-image';
 
+import { media } from '../../pages/media_style';
 //css file
 import headerStyle from './headerStyle';
 
@@ -61,15 +61,16 @@ class Header extends React.Component {
 		const Div = styled.div`
 			margin-top: 10px;
 		`;
-
-		const Sign = styled.button`
-			background: transparent;
-			border-radius: 5px;
-			border: 1.5px solid palevioletred;
-			color: palevioletred;
-			margin: 0 1em;
-			padding: 0.25em 1em;
-			font-size: 17px;
+		const A = styled.a`
+			${media.tablet`
+			font-size: 1.3em
+		`}
+			${media.phone`
+			font-size: 1em
+		`}
+			color: white;
+			text-decoration: none;
+			font-size: 20px;
 		`;
 
 		const Image = styled(Img)`
@@ -77,7 +78,6 @@ class Header extends React.Component {
 			height: 25px;
 		`;
 
- 
 		return (
 			<AppBar className={appBarClasses}>
 				<Div>
@@ -86,21 +86,23 @@ class Header extends React.Component {
 							<div>
 								<li>
 									<Image
-										src={ "https://res.cloudinary.com/dkfptto8m/image/upload/v1558070244/Mongodb%20hackathon%20project/thunder.png"}
+										src={
+											'https://res.cloudinary.com/dkfptto8m/image/upload/v1558070244/Mongodb%20hackathon%20project/thunder.png'
+										}
 									/>
 									<Link prefetch href="/">
-										<a>EvoHub</a>
+										<A>EvoHub</A>
 									</Link>
 								</li>
 							</div>
 
 							<div>
 								<Link prefetch href="/">
-									<a>FAQ</a>
+									<A>FAQ</A>
 								</Link>
 
 								<Button href="#">Login</Button>
-								<Sign> Create Service </Sign>
+								 
 							</div>
 						</ul>
 
@@ -123,11 +125,6 @@ class Header extends React.Component {
 							li {
 								display: flex;
 								padding: 10px 12px;
-							}
-							a {
-								color: white;
-								text-decoration: none;
-								font-size: 20px;
 							}
 						`}</style>
 					</nav>
