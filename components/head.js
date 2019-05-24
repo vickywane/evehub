@@ -2,6 +2,7 @@ import React from 'react';
 import NextHead from 'next/head';
 import { string } from 'prop-types';
 
+ 
 const defaultDescription = '';
 const defaultOGURL = '';
 const defaultOGImage = '';
@@ -19,6 +20,7 @@ const Head = props => (
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" />
 		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" />
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" />
+	
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
 		<meta property="og:url" content={props.url || defaultOGURL} />

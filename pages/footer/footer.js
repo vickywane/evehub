@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Link from 'next/link';
 import styled from 'styled-components';
-import { FontAwesome } from 'react-web-vector-icons';
 import { media } from '.././media_style';
 
 export default class Home extends Component {
@@ -51,19 +50,11 @@ export default class Home extends Component {
 			<Div>
 				<Career>
 					<Link href="../jobs/jobs">
-						<Button>
-							  View Open Positions  
-						</Button>
+						<Button>View Open Positions</Button>
 					</Link>
 					<hr /> <br />
 				</Career>
 				<Text> Testing</Text>
-				<FontAwesome
-					name="bell"
-					color="white"
-					size={30}
-					// style={{}}
-				/>
 			</Div>
 		);
 	}

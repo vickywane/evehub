@@ -38,7 +38,7 @@ import {
     },
     container: {
       ...container,
-      minHeight: "50px",
+      minHeight: "77px",
       flex: "1",
       alignItems: "center",
       justifyContent: "space-between",

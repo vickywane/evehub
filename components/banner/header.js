@@ -6,6 +6,7 @@ import withStyles from '@material-ui/core/styles/withStyles';
 import AppBar from '@material-ui/core/AppBar';
 import Link from 'next/link';
 import Img from 'react-image';
+import Flex from 'styled-flex-component';
 
 import { media } from '../../pages/media_style';
 //css file
@@ -59,7 +60,8 @@ class Header extends React.Component {
 		`;
 
 		const Div = styled.div`
-			margin-top: 10px;
+		height : 25px
+		padding -top: 10px;
 		`;
 		const A = styled.a`
 			${media.tablet`
@@ -68,9 +70,10 @@ class Header extends React.Component {
 			${media.phone`
 			font-size: 1em
 		`}
-			color: white;
+			color: #0E2F5A;
 			text-decoration: none;
 			font-size: 20px;
+			height: 10%;
 		`;
 
 		const Image = styled(Img)`
@@ -78,13 +81,23 @@ class Header extends React.Component {
 			height: 25px;
 		`;
 
+		const NavLink = styled.div`
+			margin-left: 4%;
+			margin-right: 4%;
+		`;
+
+		const NameDiv = styled.div`
+			margin-left: 4%;
+		`;
+
+	 
 		return (
 			<AppBar className={appBarClasses}>
 				<Div>
-					<nav>
-						<ul>
-							<div>
-								<li>
+					<nav class="shadow p-5 mb-7 bg-white rounded">
+						<Flex justifyAround>
+							<NameDiv>
+								<Flex>
 									<Image
 										src={
 											'https://res.cloudinary.com/dkfptto8m/image/upload/v1558070244/Mongodb%20hackathon%20project/thunder.png'
@@ -93,18 +106,24 @@ class Header extends React.Component {
 									<Link prefetch href="/">
 										<A>EvoHub</A>
 									</Link>
-								</li>
-							</div>
+								</Flex>
+							</NameDiv>
 
-							<div>
-								<Link prefetch href="/">
-									<A>FAQ</A>
-								</Link>
-
-								<Button href="#">Login</Button>
-								 
-							</div>
-						</ul>
+							<Flex>
+									<NavLink>
+										<a> Login </a>
+									</NavLink>
+									<NavLink>
+										<a> Team </a>
+									</NavLink>
+									<NavLink>
+										<a> FAQ </a>
+									</NavLink>
+									<NavLink>
+										<a> Usage </a>
+									</NavLink>
+							</Flex>
+						</Flex>
 
 						<style jsx>{`
 							:global(body) {
@@ -115,13 +134,7 @@ class Header extends React.Component {
 							nav {
 								text-align: center;
 							}
-							ul {
-								display: flex;
-								justify-content: space-between;
-							}
-							nav > ul {
-								padding: 4px 16px;
-							}
+
 							li {
 								display: flex;
 								padding: 10px 12px;

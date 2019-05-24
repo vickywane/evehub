@@ -35,7 +35,7 @@ const Feature = styled.h5`
 `;
 const Banner = styled(Img)`
 	width: 100%;
-	height: 330px;
+	height: 250px;
 `;
 const FeatureText = styled.p`
 	padding-left: 30px;
@@ -96,7 +96,7 @@ export default function service() {
 			
 			<Banner
 				class="d-block w-100"
-				src={'https://res.cloudinary.com/dkfptto8m/image/upload/v1557951919/Mongodb%20hackathon%20project/cog.jpg'}
+				src={'https://res.cloudinary.com/dkfptto8m/image/upload/v1558090271/Mongodb%20hackathon%20project/FRONT-END_OPERATION_DESIGN_1.png'}
 				alt="First slide"
 				unloader = {<p> Not found</p>}
 			/>

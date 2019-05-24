@@ -9,6 +9,8 @@ import Update from '.././updates/update';
 import Blog from '.././updates/blog';
 import Message from './message';
 
+import Service from './explanation/service';
+
 export default class Home extends Component {
 	render() {
 		const Text = styled.p`
@@ -30,6 +32,32 @@ export default class Home extends Component {
 			text-align: center;
 		`;
 
+		const Contain = styled.div`
+			${media.tablet`
+		   padding-right: 60px;
+		   text-align: right;
+	   `}
+			${media.phone`
+	   text-align: center;
+	   `}
+	   &:hover {
+				cursor: pointer;
+				color: blue;
+			}
+			padding-right: 70px;
+			text-align: right;
+		`;
+
+		const Next = styled.p`
+			${media.tablet`
+		   font-size: 1.4em
+	   `}
+			${media.phone`
+	   font-size: 1.2em
+   `}
+   font-size: 1.5em
+		`;
+
 		const Div = styled.div`
 			${media.desktop`
 				padding-left : 50px
@@ -45,35 +73,6 @@ export default class Home extends Component {
 			padding-top : 1%
 		`;
 
-		const Contain = styled.div`
-			${media.tablet`
-				padding-right: 60px;
-				text-align: right;
-			`}
-			${media.phone`
-			text-align: center;
-			`}
-			&:hover {
-				cursor: pointer;
-				color: blue;
-			}
-			padding-right: 70px;
-			text-align: right;
-		`;
-
-		const Next = styled.p`
-			${media.tablet`
-				font-size: 1.4em
-			`}
-			${media.phone`
-			font-size: 1.2em
-		`}
-		font-size: 1.5em
-		`;
-		const Quote = styled.p`
-			font-size: 2em;
-			text-align: center;
-		`;
 		const Page = styled.p`
 			color: grey;
 			${media.tablet`
@@ -91,36 +90,13 @@ export default class Home extends Component {
 		return (
 			<div>
 				<Div>
-					<Quote>
-						EvoHub is a digital system built to make catering for Electric Vehicles easier for Electric
-						Vehicle Owners.
-					</Quote>{' '}
 					<br />
 					<Text>
 						EvoHub aims to provide a proper Electric Vehicle Management Infastructure that would connect
 						Private Chargers or Public Charging Station Owners and Technicians with Electric Vehicle Owners
 						seamlessly.
 					</Text>
-					<Image
-						unloader={<Spinner />}
-						loader={<Spinner />}
-						src={[
-							'https://res.cloudinary.com/dkfptto8m/image/upload/v1558090271/Mongodb%20hackathon%20project/FRONT-END_OPERATION_DESIGN_1.png',
-						]}
-					/>
-					<Link href="../service/service">
-						<Contain>
-							<Next>
-								<a>
-									{' '}
-									Learn More: <b> Service Usage</b>{' '}
-								</a>
-							</Next>
-							<Page>
-								<a> Usage , Features , Platforms > </a>
-							</Page>
-						</Contain>
-					</Link>
+					<Service />
 					<hr />
 					<Text>
 						Inorder to make the service more useful to our end users, Payments gateways are intergrated
@@ -178,10 +154,10 @@ export default class Home extends Component {
 				<div>
 					<Update />
 				</div>
-
 				<div>
 					<Message />
-				</div> <br /> <br />
+				</div>{' '}
+				<br /> <br />
 			</div>
 		);
 	}
