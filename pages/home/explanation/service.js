@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { media } from '../../media_style';
 import { Card } from 'react-bootstrap';
 import Flex from 'styled-flex-component';
+import Img from 'react-image';
 
 const Contain = styled.div`
 	${media.tablet`
@@ -19,6 +20,11 @@ const Contain = styled.div`
 	}
 	padding-right: 70px;
 	text-align: right;
+`;
+
+const Banner = styled(Img)`
+	width: 55%;
+	height: 55vh;
 `;
 
 const Container = styled.div`
@@ -39,6 +45,10 @@ const Text = styled.p`
 	padding-left: 5%;
 	padding-right: 5%;
 	color: black;
+`;
+
+const Cards = styled.p`
+	width: 40%;
 `;
 
 const StrtButton = styled.button`
@@ -68,9 +78,22 @@ export default function service() {
 			</Text>
 
 			<Flex>
-				<Card style={{ width: '25%', maxHeight: '20%', marginLeft: '2%' , marginRight: '2%' }}> aaa</Card>
-				<Card style={{ width: '25%', height: '20%' }}> aaa</Card>
-				<Card style={{ width: '25%', height: '20%' }}> aaa</Card>
+				<Banner
+					src={[
+						'https://res.cloudinary.com/dkfptto8m/image/upload/v1558689080/Mongodb%20hackathon%20project/SERVICE.png',
+					]}
+				/>
+
+				<Cards>
+					<Flex>
+						<Card style={{ width: '25%', maxHeight: '20%', marginLeft: '2%', marginRight: '2%' }}>
+							{' '}
+							aaa
+						</Card>
+						<Card style={{ width: '25%', maxHeight: '20%' }}> aaa</Card>
+						<Card style={{ width: '25%', maxHeight: '20%' }}> aaa</Card>
+					</Flex>
+				</Cards>
 			</Flex>
 
 			<Link href="../service/service">

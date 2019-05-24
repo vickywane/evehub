@@ -26,9 +26,9 @@
 		"react-helmet": "^5.2.1",
 		"react-image": "^2.1.1",
 		"react-spinners": "^0.5.4",
-		"styled-components": "^4.2.0",
 		"semantic-ui-css": "^2.4.1",
 		"semantic-ui-react": "^0.84.0",
+		"styled-components": "^4.2.0",
 		"styled-flex-component": "^3.0.0"
 	}
 }
