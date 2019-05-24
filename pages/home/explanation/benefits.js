@@ -28,30 +28,23 @@ const Banner = styled(Img)`
 `;
 
 const Container = styled.div`
-	height: 80vh;
-	background: #f4f7f8;
+	height: 50vh;
+	background: #0066f5;
 `;
 
 const Title = styled.p`
 	font-size: 1em;
 	padding-top: 2%;
 	padding-left: 2%;
-	color: blue;
+	color: white;
 `;
 
 const Text = styled.p`
 	font-size: 1em;
-	padding-left: 7%;
-	padding-right: 5%;
-	color: #0e2f5a;
-`;
-
-const Header = styled.p`
-	font-size: 2em;
+	padding-top: 1%;
 	padding-left: 5%;
-	font-weight: bold;
-	width: 70%;
-	color: #0e2f5a;
+	padding-right: 5%;
+	color: white;
 `;
 
 const Cards = styled.div`
@@ -60,12 +53,12 @@ const Cards = styled.div`
 
 const StrtButton = styled.button`
 	background: transparent;
-	text-align: left;
+	text-align: center;
 	border-radius: 2px;
 	height: 40px;
 	width: 20%;
 	border: 1.2px solid #0078ff;
-	color: #0e2f5a;
+	color: #fff;
 	margin: 0 1em;
 	padding: 0.25em 1em;
 	font-size: 1em;
@@ -75,16 +68,10 @@ const StrtButton = styled.button`
 	}
 `;
 
-const Button = styled.div`
-	text-align: left;
-`;
-
 export default function service() {
 	return (
 		<Container>
-			<Title> USAGE </Title>
-			<Header>EvoHub for private chargers , technicians and Electric Vehicle Owners.</Header>
-
+			<Title> FEATURES </Title>
 			<Text>
 				EvoHub is built for Electric Vehicle Owners , Private or Public Charging Station Owners and Maintenance
 				Outlets .
@@ -101,19 +88,12 @@ export default function service() {
 						<Card style={{ width: '25%', maxHeight: '20%' }}> aaa</Card>
 					</Flex>
 				</Cards>
-				<Banner
-					unloader={<p> loading</p>}
-					loader={<p> not loading</p>}
-					src={[
-						'https://res.cloudinary.com/dkfptto8m/image/upload/v1558689080/Mongodb%20hackathon%20project/SERVICE.png',
-					]}
-				/>
+				 
 			</Flex>
-			<Button>
-				<Link href="../service/service">
-					<StrtButton> Learn More </StrtButton>
-				</Link>{' '}
-			</Button>
+
+			<Link href="../service/service">
+				<StrtButton> Learn More </StrtButton>
+			</Link>
 		</Container>
 	);
 }

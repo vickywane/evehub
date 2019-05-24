@@ -10,6 +10,8 @@ import Blog from '.././updates/blog';
 import Message from './message';
 
 import Service from './explanation/service';
+import Benefits from './explanation/benefits';
+import Security from './explanation/security';
 
 export default class Home extends Component {
 	render() {
@@ -94,7 +96,11 @@ export default class Home extends Component {
 					EvoHub aims to provide a proper Electric Vehicle Management Infastructure that would connect Private
 					Chargers or Public Charging Station Owners and Technicians with Electric Vehicle Owners seamlessly.
 				</Text>
-				<Service />
+				<div>
+					<Benefits />
+					<Service />
+					<Security />
+				</div>
 				<hr />
 				<Text>
 					Inorder to make the service more useful to our end users, Payments gateways are intergrated which

@@ -4,6 +4,7 @@ import All from '../components/banner/all';
 import Banner from '../components/banner/banner';
 import Home from './home/home';
 import Footer from './footer/footer';
+// import "semantic-ui-css/semantic.min.css"
 
 class App extends React.Component {
 	render() {

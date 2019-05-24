@@ -9,7 +9,8 @@ class banner extends React.Component {
 	render() {
 		const { classes, ...rest } = this.props;
 		const Banner = styled(Img)`
-			width: 55%;
+			width: 65%;
+			padding-right: 3%;
 			height: 55vh;
 		`;
 
@@ -33,7 +34,7 @@ class banner extends React.Component {
 			background: #0748a8;
 			text-align: center;
 			border-radius: 3px;
-			height: 50px;
+			height: 45px;
 			width: 40%;
 			border: 1.5px solid palevioletred;
 			color: white;
@@ -46,7 +47,7 @@ class banner extends React.Component {
 			background: #0078ff;
 			text-align: center;
 			border-radius: 3px;
-			height: 50px;
+			height: 45px;
 			width: 35%;
 			border: 1px solid palevioletred;
 			color: white;
