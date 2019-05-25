@@ -14,11 +14,34 @@ class banner extends React.Component {
 			height: 55vh;
 		`;
 
+
+// testing media queries with this div ..... PHONE_SIZE NOT WORKING YET !!!!!!
 		const Container = styled.div`
 			margin-left: 5%;
 			padding-top: 15%;
 			margin-right: 15%;
-			color: #323a56;
+				color: #323a56;
+				background: blue;
+			 
+			${media.desktop`
+				margin-left: 5%;
+				padding-top: 10%;
+				background: green;
+				margin-right: 15%;
+			`}
+			${media.tablet`
+				margin-left: 5%;
+				padding-top: 10%;
+				margin-right: 15%;
+				background: red;
+			`}
+			 
+			${media.medium`
+			margin-left: 5%;
+			padding-top: 7%;
+			background: black;
+			margin-right: 15%;
+			`}
 		`;
 
 		const Title = styled.h3`
@@ -61,6 +84,7 @@ class banner extends React.Component {
 			padding-top: 10%;
 			height: 70vh;
 			background: #f0f0d0;
+			max-width: 100%;
 		`;
 
 		const CardText = styled.p`
@@ -87,7 +111,7 @@ class banner extends React.Component {
 							EvoHub is a digital system built to make catering for Electric Vehicles easier for Electric
 							Vehicle Owners.{' '}
 						</Description>
-			
+
 						<StrtButton> Get Started </StrtButton>
 						<Button> Learn More </Button>
 					</Container>
