@@ -5,6 +5,7 @@ import Img from 'react-image';
 import { media } from '../../pages/media_style';
 import Flex from 'styled-flex-component';
 
+
 class banner extends React.Component {
 	render() {
 		const { classes, ...rest } = this.props;
@@ -12,41 +13,52 @@ class banner extends React.Component {
 			width: 65%;
 			padding-right: 3%;
 			height: 55vh;
+			objject-fit: 'cover';
 		`;
 
-
-// testing media queries with this div ..... PHONE_SIZE NOT WORKING YET !!!!!!
+		// testing media queries with this div ..... PHONE_SIZE NOT WORKING YET !!!!!!
 		const Container = styled.div`
 			margin-left: 5%;
 			padding-top: 15%;
 			margin-right: 15%;
-				color: #323a56;
-				background: blue;
-			 
+			color: #323a56;
 			${media.desktop`
-				margin-left: 5%;
-				padding-top: 10%;
-				background: green;
+				margin-left: 7%;
+				padding-top: 5%;
 				margin-right: 15%;
 			`}
 			${media.tablet`
 				margin-left: 5%;
-				padding-top: 10%;
+				padding-top: 7%;
 				margin-right: 15%;
-				background: red;
 			`}
-			 
+			${media.phone`
+			margin-left: 5%;
+			margin-top: 40%;
+			margin-right: 15%;
+		`}
 			${media.medium`
 			margin-left: 5%;
 			padding-top: 7%;
-			background: black;
 			margin-right: 15%;
 			`}
 		`;
 
 		const Title = styled.h3`
 			width: 75%;
-			font-weight: bold;
+			font-weight: bold; 
+			${media.desktop`
+			 
+		`}
+		${media.tablet`
+		 
+		`}
+		${media.phone`
+		 
+	`}
+		${media.medium`
+	 
+		`}
 		`;
 
 		const Description = styled.p`

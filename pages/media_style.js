@@ -3,15 +3,15 @@ import { css } from 'styled-components';
 const ScreenSizes = {
 	DESKTOP: 2200 ,
 	TABLET: 1200,
-	MEDIUM: 800 ,
 	PHONE: 400 ,
+	MEDIUM: 800 ,
 };
 
 const sizes = {
 	desktop: ScreenSizes.DESKTOP,
 	tablet: ScreenSizes.TABLET,
-	medium: ScreenSizes.MEDIUM, 
 	phone: ScreenSizes.PHONE,
+	medium: ScreenSizes.MEDIUM, 
 };
 
 const media = Object.keys(sizes).reduce((acc, label) => {
