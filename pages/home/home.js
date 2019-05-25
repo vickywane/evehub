@@ -137,9 +137,7 @@ export default class Home extends Component {
 				<div>
 					<Update />
 				</div>
-				<div>
-					<Message />
-				</div>{' '}
+				 
 				<br /> <br />
 			</div>
 		);

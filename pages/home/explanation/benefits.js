@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { media } from '../../media_style';
 import Flex from 'styled-flex-component';
 import Img from 'react-image';
-import { Icon } from 'semantic-ui-react';
+import { Icon, Grid } from 'semantic-ui-react';
 
 const Banner = styled(Img)`
 	width: 45%;
@@ -99,89 +99,114 @@ const StrtButton = styled.button`
 	}
 `;
 
+const Div = styled.div`
+ 
+`;
 export default function service() {
 	return (
 		<Container>
 			<Title> FEATURES </Title>
 			<Text style={{ marginLeft: '5%', fontWeight: 'bold' }}>For Electric Vehicle Owners ;</Text>
 
-			<div style={{ marginLeft: '5%', marginTop: '5%', color: 'white' }}>
-				<Flex>
-					<div>
-						<Flex column>
-							<Icon name="facebook" size="big" color="red" />
-
-							<div style={{ width: '50%' }}>
-								<Feature> Telematics </Feature>
-								<Explain> Vehicle statistics all in your mobile device </Explain>
+			<Div>
+				<Grid
+					stackable
+					celled="internally"
+					columns="equal"
+					style={{ marginLeft: '15%', marginTop: '5%', color: 'white' }}
+				>
+					<Grid.Row >
+						<Grid.Column>
+							<div>
+								<Flex column>
+									<Icon name="facebook" size="big" color="red" />
+									<div style={{ width: '50%' }}>
+										<Feature> Telematics </Feature>
+										<Explain> Vehicle statistics all in your mobile device </Explain>
+									</div>
+								</Flex>
 							</div>
-						</Flex>
-					</div>
+						</Grid.Column>
 
-					<div style={{}}>
-						<Flex column>
-							<Icon name="facebook" size="big" color="red" />
+						<Grid.Column>
+							<div style={{}}>
+								<Flex column>
+									<Icon name="facebook" size="big" color="red" />
 
-							<div style={{ width: '50%' }}>
-								<Feature> GeoSpatial Query</Feature>
-								<Explain> By default all data is provided based on user location </Explain>
+									<div style={{ width: '50%' }}>
+										<Feature> GeoSpatial Query</Feature>
+										<Explain> By default all data is provided based on user location </Explain>
+									</div>
+								</Flex>
 							</div>
-						</Flex>
-					</div>
+						</Grid.Column>
 
-					<div style={{ marginRight: '5%' }}>
-						<Flex column>
-							<Icon name="facebook" size="big" color="red" />
+						<Grid.Column>
+							<div style={{ marginRight: '5%' }}>
+								<Flex column>
+									<Icon name="facebook" size="big" color="red" />
 
-							<div style={{ width: '50%' }}>
-								<Feature> Payments</Feature>
-								<Explain>Pay for your charge </Explain>
+									<div style={{ width: '70%' }}>
+										<Feature> Payments</Feature>
+										<Explain>Pay for your charge </Explain>
+									</div>
+								</Flex>
 							</div>
-						</Flex>
-					</div>
-				</Flex>
-			</div>
+						</Grid.Column>
+					</Grid.Row>
+				</Grid>
+			</Div>
 
-			<Text style={{ marginLeft: '5%', fontWeight: 'bold', marginTop: '10%' }}>
-				For Charging Station Owners ;
-			</Text>
+			<Text style={{ marginLeft: '5%', fontWeight: 'bold', marginTop: '5%' }}>For Charging Station Owners ;</Text>
 
-			<div style={{ marginLeft: '5%', marginTop: '5%', color: 'white' }}>
-				<Flex>
-					<div style={{ marginRight: '5%' }}>
-						<Flex column>
-							<Icon name="facebook" size="big" color="red" />
-
-							<div style={{ width: '50%' }}>
-								<Feature> Telematics </Feature>
-								<Explain> Vehicle statistics all in your mobile device </Explain>
+			<Div>
+				<Grid
+					stackable
+					celled="internally"
+					columns="equal"
+					style={{ marginLeft: '15%', marginTop: '5%', color: 'white' }}
+				>
+					<Grid.Row  >
+						<Grid.Column>
+							<div>
+								<Flex column>
+									<Icon name="facebook" size="big" color="red" />
+									<div style={{ width: '50%' }}>
+										<Feature> Telematics </Feature>
+										<Explain> Vehicle statistics all in your mobile device </Explain>
+									</div>
+								</Flex>
 							</div>
-						</Flex>
-					</div>
+						</Grid.Column>
 
-					<div style={{ marginRight: '5%' }}>
-						<Flex column>
-							<Icon name="facebook" size="big" color="red" />
+						<Grid.Column>
+							<div style={{}}>
+								<Flex column>
+									<Icon name="facebook" size="big" color="red" />
 
-							<div style={{ width: '50%' }}>
-								<Feature> GeoSpatial Query</Feature>
-								<Explain> By default all data is provided based on user location </Explain>
+									<div style={{ width: '50%' }}>
+										<Feature> GeoSpatial Query</Feature>
+										<Explain> By default all data is provided based on user location </Explain>
+									</div>
+								</Flex>
 							</div>
-						</Flex>
-					</div>
+						</Grid.Column>
 
-					<div style={{ marginRight: '5%' }}>
-						<Flex column>
-							<Icon name="facebook" size="big" color="red" />
+						<Grid.Column>
+							<div style={{ marginRight: '5%' }}>
+								<Flex column>
+									<Icon name="facebook" size="big" color="red" />
 
-							<div style={{ width: '50%' }}>
-								<Feature> Payments</Feature>
-								<Explain>Pay for your charge </Explain>
+									<div style={{ width: '70%' }}>
+										<Feature> Payments</Feature>
+										<Explain>Pay for your charge </Explain>
+									</div>
+								</Flex>
 							</div>
-						</Flex>
-					</div>
-				</Flex>
-			</div>
+						</Grid.Column>
+					</Grid.Row>
+				</Grid>
+			</Div>
 
 			<Link href="../service/service">
 				<Button>

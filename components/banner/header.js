@@ -8,6 +8,8 @@ import Link from 'next/link';
 import Img from 'react-image';
 import Flex from 'styled-flex-component';
 
+
+
 import { media } from '../../pages/media_style';
 //css file
 import headerStyle from './headerStyle';
@@ -48,16 +50,6 @@ class Header extends React.Component {
 			[classes.absolute]: absolute,
 			[classes.fixed]: fixed,
 		});
-
-		const Button = styled.button`
-			background: transparent;
-			border-radius: 7px;
-			border: 1.5px solid palevioletred;
-			color: palevioletred;
-			margin: 0 1em;
-			padding: 0.25em 1em;
-			font-size: 17px;
-		`;
 
 		const Div = styled.div`
 		height : 25px
