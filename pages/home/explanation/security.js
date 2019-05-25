@@ -76,26 +76,7 @@ export default function service() {
 				EvoHub is built for Electric Vehicle Owners , Private or Public Charging Station Owners and Maintenance
 				Outlets .
 			</Text>
-
-			<Flex>
-				<Cards>
-					<Flex>
-						<Card style={{ width: '25%', maxHeight: '20%', marginLeft: '2%', marginRight: '2%' }}>
-							{' '}
-							aaa
-						</Card>
-						<Card style={{ width: '25%', maxHeight: '20%' }}> aaa</Card>
-						<Card style={{ width: '25%', maxHeight: '20%' }}> aaa</Card>
-					</Flex>
-				</Cards>
-				<Banner
-					unloader={<p> loading</p>}
-					loader={<p> not loading</p>}
-					src={[
-						'https://res.cloudinary.com/dkfptto8m/image/upload/v1558689080/Mongodb%20hackathon%20project/SERVICE.png',
-					]}
-				/>
-			</Flex>
+ 
 
 			<Link href="../service/service">
 				<StrtButton> Learn More </StrtButton>

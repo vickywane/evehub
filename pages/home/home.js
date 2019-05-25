@@ -111,26 +111,7 @@ export default class Home extends Component {
 					which not well handled could lead to a leak of credentials . <br /> We are aware of this dangers and
 					preventive measures have been put in place to reduce these threat levels to a minimum.
 				</Text>
-				<Image
-					unloader={<Spinner />}
-					loader={<Spinner />}
-					src={[
-						'https://res.cloudinary.com/dkfptto8m/image/upload/v1558129785/Mongodb%20hackathon%20project/SECURITY_DESIGN.png',
-					]}
-				/>
-				<Link prefetch href="../Security/security">
-					<Contain>
-						<Next>
-							<a>
-								{' '}
-								Learn More: <b> Security </b>{' '}
-							</a>
-						</Next>
-						<Page>
-							<a> Security Concerns > </a>
-						</Page>
-					</Contain>
-				</Link>
+				  
 				<hr />
 				<Text>
 					{' '}

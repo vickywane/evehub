@@ -14,7 +14,7 @@ export default function security() {
       <Nav />
       <Banner
       class="d-block w-100"
-      src={'https://res.cloudinary.com/dkfptto8m/image/upload/v1557951919/Mongodb%20hackathon%20project/security.jpg'}
+      src={'https://res.cloudinary.com/dkfptto8m/image/upload/v1558129785/Mongodb%20hackathon%20project/SECURITY_DESIGN.png'}
       alt="First slide"
       unloader = {<p> Not found</p>}
     />

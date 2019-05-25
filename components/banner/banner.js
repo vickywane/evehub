@@ -1,10 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Carousel, Card } from 'react-bootstrap';
 import Img from 'react-image';
 import { media } from '../../pages/media_style';
 import Flex from 'styled-flex-component';
-
 
 class banner extends React.Component {
 	render() {
@@ -13,34 +11,35 @@ class banner extends React.Component {
 			width: 65%;
 			padding-right: 3%;
 			height: 55vh;
-			objject-fit: 'cover';
+			object-fit: 'cover';
 		`;
 
 		// testing media queries with this div ..... PHONE_SIZE NOT WORKING YET !!!!!!
 		const Container = styled.div`
 			margin-left: 5%;
-			padding-top: 15%;
+			padding-top: 10%;
 			margin-right: 15%;
 			color: #323a56;
 			${media.desktop`
-				margin-left: 7%;
-				padding-top: 5%;
-				margin-right: 15%;
+				margin-left: 4%;
+				padding-top: 2%;
+				margin-right: 10%;
 			`}
 			${media.tablet`
 				margin-left: 5%;
-				padding-top: 7%;
+				margin-top: 5%;
 				margin-right: 15%;
 			`}
 			${media.phone`
-			margin-left: 5%;
+			margin-left: 7%;
 			margin-top: 40%;
 			margin-right: 15%;
 		`}
 			${media.medium`
-			margin-left: 5%;
-			padding-top: 7%;
-			margin-right: 15%;
+			margin-top: 15%;
+			margin-left: 2%;
+			margin-right: 3%;
+
 			`}
 		`;
 
@@ -48,84 +47,124 @@ class banner extends React.Component {
 			width: 75%;
 			font-weight: bold; 
 			${media.desktop`
-			 
-		`}
-		${media.tablet`
-		 
+			width: 77%;
+			font-weight: bold; 
+			font-size: 2.5em; 
+			`}
+			${media.tablet`
+			width: 90%
 		`}
 		${media.phone`
-		 
+		font-size: 1.7em; 
+		width: 100%;
 	`}
 		${media.medium`
-	 
+			font-size: 2em; 
+			width: 100%;
 		`}
 		`;
 
 		const Description = styled.p`
-			color: #0e2f5a;
+			color: #0e2f5a;	
+			${media.desktop`
+			font-size: 1.2em; 
+			`}
+			${media.tablet`
+			font-size: 1.1em; 
+		`}
+		${media.phone`
+		font-size: 0.8em; 
+	`}
+		${media.medium`
+		font-size: 1em; 
+		`}
 		`;
 
 		const Button = styled.button`
 			background: #0748a8;
 			text-align: center;
-			border-radius: 3px;
-			height: 45px;
-			width: 40%;
-			border: 1.5px solid palevioletred;
+			border-radius: 5px;
+			height: 64px;
+			width: 42%;
+			border: 0.5px solid palevioletred;
 			color: white;
 			margin: 0 1em;
 			padding: 0.25em 1em;
-			font-size: 1em;
+			font-size: 0.95em;
+			${media.phone`
+			width: 35%;
+			margin-top: 10%; 
+			height: 55px;
+			width: 37%;
+			`}
+			${media.medium`
+				width: 55%;
+				margin-top: 10%; 
+				height: 50px;
+				width: 65%;
+			`} 
+			${media.desktop`
+			margin-top: 3%;
+		`}
+		`;
+
+		const Btns = styled.div`
+			${media.phone`
+		padding-left: 5%;
+		`}
+			${media.medium`
+		padding-left: 7%;
+		`}
 		`;
 
 		const StrtButton = styled.button`
 			background: #0078ff;
 			text-align: center;
-			border-radius: 3px;
-			height: 45px;
-			width: 35%;
+			border-radius: 5px;
+			height: 64px;
+			width: 42%;
 			border: 1px solid palevioletred;
 			color: white;
 			margin: 0 1em;
 			padding: 0.25em 1em;
-			font-size: 1em;
+			font-size: 0.87em;
+			${media.phone`
+			width: 35%;
+			margin-top: 1%;
+			`}
+			${media.medium`
+			height: 50px;
+			width: 65%;
+				margin-top: 1%;
+			`}
 		`;
 
 		const Div = styled.div`
 			width: 100%;
-			padding-top: 10%;
+			padding-top: 7%;
 			height: 70vh;
 			background: #f0f0d0;
-			max-width: 100%;
-		`;
-
-		const CardText = styled.p`
-			${media.tablet`
-      margin-left: 2%
-      margin-right: 2%
-      font-size: 1.3em
-      `}
-
+			max-width: 100%; 
 			${media.phone`
-		font-size: 1em
-		`}
-		font-size: 1.3em
+			height: 115vh;
+			`}
 		`;
 
 		return (
 			<Div>
 				<Flex>
 					<Container>
-						<Title> Digital charging system for electric vehicles </Title>
+						<Title> Digital charging system for electric vehicles. </Title>
 
 						<Description>
 							{' '}
 							EvoHub is a digital system built to make catering for Electric Vehicles easier for Electric
 							Vehicle Owners.{' '}
 						</Description>
-
-						<StrtButton> Get Started </StrtButton>
-						<Button> Learn More </Button>
+						<Btns>
+							<StrtButton> Get Started </StrtButton>
+							<Button> Learn More </Button>
+						</Btns>
 					</Container>
 					<Banner
 						unloader={<p> loading ... </p>}

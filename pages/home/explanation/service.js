@@ -6,22 +6,7 @@ import { Card } from 'react-bootstrap';
 import Flex from 'styled-flex-component';
 import Img from 'react-image';
 
-const Contain = styled.div`
-	${media.tablet`
-				padding-right: 60px;
-				text-align: right;
-			`}
-	${media.phone`
-			text-align: center;
-			`}
-			&:hover {
-		cursor: pointer;
-		color: blue;
-	}
-	padding-right: 70px;
-	text-align: right;
-`;
-
+ 
 const Banner = styled(Img)`
 	width: 45%;
 	height: 40vh;
@@ -30,6 +15,12 @@ const Banner = styled(Img)`
 const Container = styled.div`
 	height: 80vh;
 	background: #f4f7f8;
+	${media.tablet`
+	height: 100vh;
+`}
+	${media.medium`
+	height: 110vh;
+`}
 `;
 
 const Title = styled.p`
@@ -40,10 +31,18 @@ const Title = styled.p`
 `;
 
 const Text = styled.p`
-	font-size: 1em;
+	font-size: 1.2em;
 	padding-left: 7%;
 	padding-right: 5%;
-	color: #0e2f5a;
+	color: #0e2f5a; 
+	${media.tablet`
+	font-size: 1.1em;
+	padding-left: 5%;
+`}
+	${media.medium`
+	font-size: 1.1em;
+	padding-left: 5%;
+`}
 `;
 
 const Header = styled.p`
@@ -52,6 +51,15 @@ const Header = styled.p`
 	font-weight: bold;
 	width: 70%;
 	color: #0e2f5a;
+	${media.tablet`
+	padding-left: 2%;
+	font-size: 1.7em;
+`}
+	${media.medium`
+	padding-left: 2%;
+	width: 87%;
+	font-size: 1.5em;
+`}
 `;
 
 const Cards = styled.div`
@@ -60,9 +68,9 @@ const Cards = styled.div`
 
 const StrtButton = styled.button`
 	background: transparent;
-	text-align: left;
+	text-align: center;
 	border-radius: 2px;
-	height: 40px;
+	height: 50px;
 	width: 20%;
 	border: 1.2px solid #0078ff;
 	color: #0e2f5a;
@@ -72,11 +80,16 @@ const StrtButton = styled.button`
 	&:hover {
 		color: white;
 		background: #0078ff;
-	}
+	} 
+	${media.medium`
+	width: 30%;
+`}
 `;
 
 const Button = styled.div`
-	text-align: left;
+	text-align: right;
+	margin-top: 5%;
+	margin-right: 5%;
 `;
 
 export default function service() {
@@ -112,7 +125,7 @@ export default function service() {
 			<Button>
 				<Link href="../service/service">
 					<StrtButton> Learn More </StrtButton>
-				</Link>{' '}
+				</Link> 
 			</Button>
 		</Container>
 	);
