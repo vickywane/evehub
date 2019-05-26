@@ -69,7 +69,8 @@ const Explain = styled.p`
 	`}
 	${media.medium`
 	font-size : 1em
-	`}
+	`} 
+
 `;
 
 const Button = styled.div`
@@ -99,9 +100,27 @@ const StrtButton = styled.button`
 	}
 `;
 
-const Div = styled.div`
- 
+const Benefits = styled.div` 
+	width: 50%
+	@media (max-width: 770px) {
+		text-align: center
+	}
+	@media (max-width: 450px) {
+		text-align: center
+	}
 `;
+
+const Div = styled.div`
+	@media (max-width: 770px) {
+		margin-left: 10%;
+		margin-right: 20%;
+	}
+	@media (max-width: 450px) {
+		margin-left: 10%;
+		margin-right: 20%;
+	}
+`;
+
 export default function service() {
 	return (
 		<Container>
@@ -113,17 +132,17 @@ export default function service() {
 					stackable
 					celled="internally"
 					columns="equal"
-					style={{ marginLeft: '15%', marginTop: '5%', color: 'white' }}
+					style={{ marginLeft: '5%', marginTop: '5%', color: 'white' }}
 				>
-					<Grid.Row >
+					<Grid.Row>
 						<Grid.Column>
 							<div>
 								<Flex column>
 									<Icon name="facebook" size="big" color="red" />
-									<div style={{ width: '50%' }}>
+									<Benefits >
 										<Feature> Telematics </Feature>
 										<Explain> Vehicle statistics all in your mobile device </Explain>
-									</div>
+									</Benefits>
 								</Flex>
 							</div>
 						</Grid.Column>
@@ -133,10 +152,10 @@ export default function service() {
 								<Flex column>
 									<Icon name="facebook" size="big" color="red" />
 
-									<div style={{ width: '50%' }}>
+									<Benefits>
 										<Feature> GeoSpatial Query</Feature>
 										<Explain> By default all data is provided based on user location </Explain>
-									</div>
+									</Benefits>
 								</Flex>
 							</div>
 						</Grid.Column>
@@ -146,10 +165,10 @@ export default function service() {
 								<Flex column>
 									<Icon name="facebook" size="big" color="red" />
 
-									<div style={{ width: '70%' }}>
+									<Benefits>
 										<Feature> Payments</Feature>
 										<Explain>Pay for your charge </Explain>
-									</div>
+									</Benefits>
 								</Flex>
 							</div>
 						</Grid.Column>
@@ -164,17 +183,17 @@ export default function service() {
 					stackable
 					celled="internally"
 					columns="equal"
-					style={{ marginLeft: '15%', marginTop: '5%', color: 'white' }}
+					style={{ marginLeft: '5%', marginTop: '5%', color: 'white' }}
 				>
-					<Grid.Row  >
+					<Grid.Row>
 						<Grid.Column>
 							<div>
 								<Flex column>
 									<Icon name="facebook" size="big" color="red" />
-									<div style={{ width: '50%' }}>
+									<Benefits>
 										<Feature> Telematics </Feature>
 										<Explain> Vehicle statistics all in your mobile device </Explain>
-									</div>
+									</Benefits>
 								</Flex>
 							</div>
 						</Grid.Column>
@@ -184,10 +203,10 @@ export default function service() {
 								<Flex column>
 									<Icon name="facebook" size="big" color="red" />
 
-									<div style={{ width: '50%' }}>
+									<Benefits>
 										<Feature> GeoSpatial Query</Feature>
 										<Explain> By default all data is provided based on user location </Explain>
-									</div>
+									</Benefits>
 								</Flex>
 							</div>
 						</Grid.Column>
@@ -197,10 +216,10 @@ export default function service() {
 								<Flex column>
 									<Icon name="facebook" size="big" color="red" />
 
-									<div style={{ width: '70%' }}>
+									<Benefits>
 										<Feature> Payments</Feature>
 										<Explain>Pay for your charge </Explain>
-									</div>
+									</Benefits>
 								</Flex>
 							</div>
 						</Grid.Column>

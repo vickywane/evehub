@@ -2,16 +2,29 @@ import React from 'react';
 import styled from 'styled-components';
 import Img from 'react-image';
 import { media } from '../../pages/media_style';
-import Flex from 'styled-flex-component';
+import { Grid } from 'semantic-ui-react';
 
 class banner extends React.Component {
 	render() {
 		const { classes, ...rest } = this.props;
 		const Banner = styled(Img)`
-			width: 65%;
-			padding-right: 3%;
+			width: 40vw;
+			padding-right: 5%;
 			height: 55vh;
-			object-fit: 'cover';
+			object-fit: 'cover'; 
+			@media (max-width: 800px min-width: 500px ) {
+				padding-right: 20%;
+			}
+			${media.phone`
+			height: 40vh;
+			margin-left: 25%;
+			text-align : center 
+		`}
+			${media.medium`
+		height: 40vh;
+		margin-left: 35%;
+		text-align : center 
+	`}
 		`;
 
 		// testing media queries with this div ..... PHONE_SIZE NOT WORKING YET !!!!!!
@@ -34,10 +47,12 @@ class banner extends React.Component {
 			margin-left: 7%;
 			margin-top: 40%;
 			margin-right: 15%;
+			text-align : center 
 		`}
 			${media.medium`
 			margin-top: 15%;
 			margin-left: 2%;
+			text-align : center 
 			margin-right: 3%;
 
 			`}
@@ -144,36 +159,43 @@ class banner extends React.Component {
 			padding-top: 7%;
 			height: 70vh;
 			background: #f0f0d0;
-			max-width: 100%; 
-			${media.phone`
-			height: 115vh;
-			`}
+			max-width: 100%;
+			@media (max-width: 770px) {
+				height: 110vh;
+			}
+			@media (max-width: 450px) {
+				height: 100vh;
+			}
 		`;
 
 		return (
 			<Div>
-				<Flex>
-					<Container>
-						<Title> Digital charging system for electric vehicles. </Title>
+				<Grid stackable celled="internally" columns="equal">
+					<Grid.Column>
+						<Container>
+							<Title> Digital charging system for electric vehicles. </Title>
 
-						<Description>
-							{' '}
-							EvoHub is a digital system built to make catering for Electric Vehicles easier for Electric
-							Vehicle Owners.{' '}
-						</Description>
-						<Btns>
-							<StrtButton> Get Started </StrtButton>
-							<Button> Learn More </Button>
-						</Btns>
-					</Container>
-					<Banner
-						unloader={<p> loading ... </p>}
-						loader={<p> not loading ... </p>}
-						src={[
-							'https://res.cloudinary.com/dkfptto8m/image/upload/v1558649119/Mongodb%20hackathon%20project/phone1.png',
-						]}
-					/>
-				</Flex>
+							<Description>
+								{' '}
+								EvoHub is a digital system built to make catering for Electric Vehicles easier for
+								Electric Vehicle Owners.{' '}
+							</Description>
+							<Btns>
+								<StrtButton> Get Started </StrtButton>
+								<Button> Learn More </Button>
+							</Btns>
+						</Container>
+					</Grid.Column>
+					<Grid.Column>
+						<Banner
+							unloader={<p> loading ... </p>}
+							loader={<p> not loading ... </p>}
+							src={[
+								'https://res.cloudinary.com/dkfptto8m/image/upload/v1558649119/Mongodb%20hackathon%20project/phone1.png',
+							]}
+						/>
+					</Grid.Column>
+				</Grid>
 			</Div>
 		);
 	}
