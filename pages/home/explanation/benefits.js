@@ -1,10 +1,10 @@
-import React from 'react';
-import styled from 'styled-components';
 import Link from 'next/link';
-import { media } from '../../media_style';
-import Flex from 'styled-flex-component';
+import React from 'react';
 import Img from 'react-image';
-import { Icon, Grid } from 'semantic-ui-react';
+import { Grid, Icon } from 'semantic-ui-react';
+import styled from 'styled-components';
+import Flex from 'styled-flex-component';
+import { media } from '../../media_style';
 
 const Banner = styled(Img)`
 	width: 45%;
