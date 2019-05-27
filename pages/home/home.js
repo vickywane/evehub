@@ -1,17 +1,13 @@
-import React, { Component, lazy, Suspense } from 'react';
 import Link from 'next/link';
-import styled from 'styled-components';
-import { media } from '../media_style';
+import React, { Component } from 'react';
 import Img from 'react-image';
-
-import Spinner from '../../components/spinner';
-import Update from '.././updates/update';
+import styled from 'styled-components';
 import Blog from '.././updates/blog';
-import Message from './message';
-
-import Service from './explanation/service';
+import Update from '.././updates/update';
+import { media } from '../media_style';
 import Benefits from './explanation/benefits';
 import Security from './explanation/security';
+import Service from './explanation/service';
 
 export default class Home extends Component {
 	render() {
@@ -24,7 +20,7 @@ export default class Home extends Component {
 			${media.phone`
 			padding-left: 20px
 			padding-right: 20px
-			font-size: 1.1em
+			font-size: 1em
 			`}
 			font-size: 1.3em
 		`;
@@ -92,10 +88,13 @@ export default class Home extends Component {
 		return (
 			<div>
 				<br />
-				<Text>
-					EvoHub aims to provide a proper Electric Vehicle Management Infastructure that would connect Private
-					Chargers or Public Charging Station Owners and Technicians with Electric Vehicle Owners seamlessly.
-				</Text>
+				<div style={{marginTop : '2em', marginBottom : '3em'}}> 
+					<Text>
+						EvoHub aims to provide a proper Electric Vehicle Management Infastructure that would connect
+						Private Chargers or Public Charging Station Owners and Technicians with Electric Vehicle Owners
+						seamlessly.
+					</Text>
+				</div>
 				<div>
 					<Benefits />
 					<Service />
@@ -111,7 +110,6 @@ export default class Home extends Component {
 					which not well handled could lead to a leak of credentials . <br /> We are aware of this dangers and
 					preventive measures have been put in place to reduce these threat levels to a minimum.
 				</Text>
-				  
 				<hr />
 				<Text>
 					{' '}
@@ -137,7 +135,6 @@ export default class Home extends Component {
 				<div>
 					<Update />
 				</div>
-				 
 				<br /> <br />
 			</div>
 		);

@@ -5,8 +5,8 @@ import { media } from '../../media_style';
 import { Card } from 'react-bootstrap';
 import Flex from 'styled-flex-component';
 import Img from 'react-image';
+import { Grid } from 'semantic-ui-react';
 
- 
 const Banner = styled(Img)`
 	width: 45%;
 	height: 40vh;
@@ -34,7 +34,7 @@ const Text = styled.p`
 	font-size: 1.2em;
 	padding-left: 7%;
 	padding-right: 5%;
-	color: #0e2f5a; 
+	color: #0e2f5a;
 	${media.tablet`
 	font-size: 1.1em;
 	padding-left: 5%;
@@ -80,7 +80,7 @@ const StrtButton = styled.button`
 	&:hover {
 		color: white;
 		background: #0078ff;
-	} 
+	}
 	${media.medium`
 	width: 30%;
 `}
@@ -103,29 +103,33 @@ export default function service() {
 				Outlets .
 			</Text>
 
-			<Flex>
-				<Cards>
-					<Flex>
-						<Card style={{ width: '25%', maxHeight: '20%', marginLeft: '2%', marginRight: '2%' }}>
-							{' '}
-							aaa
-						</Card>
-						<Card style={{ width: '25%', maxHeight: '20%' }}> aaa</Card>
-						<Card style={{ width: '25%', maxHeight: '20%' }}> aaa</Card>
-					</Flex>
-				</Cards>
-				<Banner
-					unloader={<p> loading</p>}
-					loader={<p> not loading</p>}
-					src={[
-						'https://res.cloudinary.com/dkfptto8m/image/upload/v1558689080/Mongodb%20hackathon%20project/SERVICE.png',
-					]}
-				/>
-			</Flex>
+			<Grid stackable   columns="equal">
+				<Grid.Column>
+					<Cards>
+						<Flex>
+							<Card style={{ width: '25%', maxHeight: '20%', marginLeft: '2%', marginRight: '2%' }}>
+								{' '}
+								aaa
+							</Card>
+							<Card style={{ width: '25%', maxHeight: '20%' }}> aaa</Card>
+							<Card style={{ width: '25%', maxHeight: '20%' }}> aaa</Card>
+						</Flex>
+					</Cards>
+				</Grid.Column>
+				<Grid.Column>
+					<Banner
+						unloader={<p> loading</p>}
+						loader={<p> not loading</p>}
+						src={[
+							'https://res.cloudinary.com/dkfptto8m/image/upload/v1558689080/Mongodb%20hackathon%20project/SERVICE.png',
+						]}
+					/>
+				</Grid.Column>
+			</Grid>
 			<Button>
 				<Link href="../service/service">
 					<StrtButton> Learn More </StrtButton>
-				</Link> 
+				</Link>
 			</Button>
 		</Container>
 	);
