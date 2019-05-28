@@ -42,9 +42,19 @@ const Title = styled.p`
 const Text = styled.p`
 	font-size: 1em;
 	padding-top: 1%;
+	padding-left: 10%;
+	padding-right: 10%;
+	color: white;
+`;
+
+const Header = styled.p`
+	font-size: 1.7em;
+	padding-top: 1%;
 	padding-left: 5%;
 	padding-right: 5%;
 	color: white;
+	width: 50%;
+	font-weight: bold;
 `;
 
 const Cards = styled.div`
@@ -72,15 +82,13 @@ export default function service() {
 	return (
 		<Container>
 			<Title> SECURITY </Title>
-			<Text>
-				EvoHub is built for Electric Vehicle Owners , Private or Public Charging Station Owners and Maintenance
-				Outlets .
-			</Text>
- 
+			<Header>Where Is Your Data Transmitted to ?</Header>
 
-			<Link href="../service/service">
-				<StrtButton> Learn More </StrtButton>
-			</Link>
+			<div style={{ textAlign: 'right', marginRight: '5%' }}>
+				<Link href="../service/security">
+					<StrtButton> Learn More </StrtButton>
+				</Link>
+			</div>
 		</Container>
 	);
 }

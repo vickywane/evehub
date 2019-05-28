@@ -8,6 +8,7 @@ import { media } from '../media_style';
 import Benefits from './explanation/benefits';
 import Security from './explanation/security';
 import Service from './explanation/service';
+import Message from './message';
 
 export default class Home extends Component {
 	render() {
@@ -88,7 +89,7 @@ export default class Home extends Component {
 		return (
 			<div>
 				<br />
-				<div style={{marginTop : '2em', marginBottom : '3em'}}> 
+				<div style={{ marginTop: '2em', marginBottom: '3em' }}>
 					<Text>
 						EvoHub aims to provide a proper Electric Vehicle Management Infastructure that would connect
 						Private Chargers or Public Charging Station Owners and Technicians with Electric Vehicle Owners
@@ -135,7 +136,9 @@ export default class Home extends Component {
 				<div>
 					<Update />
 				</div>
-				<br /> <br />
+				<br />
+				<Message />
+				<br />
 			</div>
 		);
 	}

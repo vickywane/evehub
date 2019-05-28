@@ -30,8 +30,6 @@ export default () => (
 						<List link inverted>
 							<List.Item as="a">Jobs</List.Item>
 							<List.Item as="a">Announcement</List.Item>
-							<List.Item as="a"> a</List.Item>
-							<List.Item as="a">Favorite X-Men</List.Item>
 						</List>
 					</Grid.Column>
 				</Grid.Row>
