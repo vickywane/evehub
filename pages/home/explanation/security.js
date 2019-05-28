@@ -85,7 +85,7 @@ export default function service() {
 			<Header>Where Is Your Data Transmitted to ?</Header>
 
 			<div style={{ textAlign: 'right', marginRight: '5%' }}>
-				<Link href="../service/security">
+				<Link href="../security/security">
 					<StrtButton> Learn More </StrtButton>
 				</Link>
 			</div>

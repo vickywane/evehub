@@ -28,7 +28,7 @@ export default () => (
 					<Grid.Column width={5}>
 						<Header inverted as="h3" content="More " />
 						<List link inverted>
-							<List.Item as="a">Jobs</List.Item>
+							<List.Item as="a">Careers</List.Item>
 							<List.Item as="a">Announcement</List.Item>
 						</List>
 					</Grid.Column>
