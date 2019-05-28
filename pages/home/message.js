@@ -6,7 +6,7 @@ import { Grid } from 'semantic-ui-react';
 
 export default class reset extends Component {
 	state = {
-		sent: true,
+		sent: false,
 	};
 
 	render() {
