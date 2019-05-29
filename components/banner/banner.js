@@ -4,6 +4,7 @@ import Img from "react-image";
 import { media } from "../../pages/media_style";
 import { Grid } from "semantic-ui-react";
 import posed from "react-pose";
+import SplitText from "react-pose-text";
 
 class banner extends React.Component {
   render() {
@@ -113,6 +114,19 @@ class banner extends React.Component {
       }
     });
 
+    const Sidebar = posed.div({
+      enter: {
+        x: "0%",
+        beforeChildren: true,
+        staggerChildren: 50
+      }
+    });
+
+    const charPoses = {
+      exit: { opacity: 0 },
+      enter: { opacity: 1 }
+    };
+
     const Button = styled(Box)`
 			background: #0748a8;
 			text-align: center;
@@ -185,14 +199,23 @@ class banner extends React.Component {
         height: 100vh;
       }
     `;
-
+    <Sidebar class="sidebar" initialPose="exit" pose="enter">
+      <h1>
+        <SplitText charPoses={charPoses}>Contaaaaaaaaessssnssts</SplitText>
+      </h1>
+    </Sidebar>;
     return (
       <Div>
         <Grid stackable celled="internally" columns="equal">
           <Grid.Column>
             <Container>
-              <Title> Digital charging system for electric vehicles. </Title>
-
+              <Sidebar initialPose="exit" pose="enter">
+                <Title>
+                  <SplitText charPoses={charPoses}>
+                    Digital charging system for electric vehicles.
+                  </SplitText>{" "}
+                </Title>
+              </Sidebar>
               <Description>
                 {" "}
                 EvoHub is a digital system built to make catering for Electric
