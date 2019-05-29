@@ -1,37 +1,39 @@
 {
-	"name": "EvoHub",
-	"scripts": {
-		"dev": "next",
-		"build": "next build",
-		"heroku-postbuild": "next build",
-		"start": "next start -p $PORT"
-	},
-	"devDependencies": {
-		"babel-plugin-styled-components": "^1.8.0"
-	},
-	"dependencies": {
-		"@emotion/core": "^10.0.10",
-		"@material-ui/core": "^3.9.3",
-		"@material-ui/icons": "^3.0.2",
-		"@zeit/next-css": "^1.0.1",
-		"bootstrap": "^4.3.1",
-		"class-names": "^1.0.0",
-		"classnames": "^2.2.6",
-		"emotion": "^10.0.9",
-		"husky": "^2.3.0",
-		"next": "^8.1.0",
-		"prop-types": "^15.7.2",
-		"react": "^16.8.6",
-		"react-bootstrap": "^1.0.0-beta.8",
-		"react-dom": "^16.8.6",
-		"react-helmet": "^5.2.1",
-		"react-image": "^2.1.1",
-		"react-kawaii": "^0.12.0",
-		"react-pose": "^4.0.8",
-		"react-spinners": "^0.5.4",
-		"semantic-ui-css": "^2.4.1",
-		"semantic-ui-react": "^0.84.0",
-		"styled-components": "^4.2.0",
-		"styled-flex-component": "^3.0.0"
-	}
+  "name": "evohub",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "heroku-postbuild": "next build",
+    "start": "next start -p $PORT"
+  },
+  "devDependencies": {
+    "babel-plugin-styled-components": "^1.8.0",
+    "pretty-quick": "1.10.0",
+    "prettier": "1.16.4"
+  },
+  "dependencies": {
+    "@emotion/core": "^10.0.10",
+    "@material-ui/core": "^3.9.3",
+    "@material-ui/icons": "^3.0.2",
+    "@zeit/next-css": "^1.0.1",
+    "bootstrap": "^4.3.1",
+    "class-names": "^1.0.0",
+    "classnames": "^2.2.6",
+    "emotion": "^10.0.9",
+    "husky": "^2.3.0",
+    "next": "^8.1.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-bootstrap": "^1.0.0-beta.8",
+    "react-dom": "^16.8.6",
+    "react-helmet": "^5.2.1",
+    "react-image": "^2.1.1",
+    "react-kawaii": "^0.12.0",
+    "react-pose": "^4.0.8",
+    "react-spinners": "^0.5.4",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^0.84.0",
+    "styled-components": "^4.2.0",
+    "styled-flex-component": "^3.0.0"
+  }
 }
