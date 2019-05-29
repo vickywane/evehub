@@ -1,34 +1,34 @@
-import React from 'react';
-import styled from 'styled-components';
-import Img from 'react-image';
-import { media } from '../../pages/media_style';
-import { Grid } from 'semantic-ui-react';
+import React from "react";
+import styled from "styled-components";
+import Img from "react-image";
+import { media } from "../../pages/media_style";
+import { Grid } from "semantic-ui-react";
+import posed from "react-pose";
 
 class banner extends React.Component {
-	render() {
-		const { classes, ...rest } = this.props;
-		const Banner = styled(Img)`
-			width: 40vw;
-			padding-right: 5%;
-			height: 55vh;
-			object-fit: 'cover'; 
-			@media (max-width: 800px min-width: 500px ) {
-				padding-right: 20%;
-			}
-			${media.phone`
+  render() {
+    const Banner = styled(Img)`
+      width: 40vw;
+      padding-right: 5%;
+      height: 55vh;
+      object-fit: "cover";
+      @media (max-width: 800px min-width: 500px) {
+        padding-right: 20%;
+      }
+      ${media.phone`
 			height: 40vh;
 			margin-left: 25%;
 			text-align : center 
 		`}
-			${media.medium`
+      ${media.medium`
 		height: 40vh;
 		margin-left: 35%;
 		text-align : center 
 	`}
-		`;
+    `;
 
-		// testing media queries with this div ..... PHONE_SIZE NOT WORKING YET !!!!!!
-		const Container = styled.div`
+    // testing media queries with this div ..... PHONE_SIZE NOT WORKING YET !!!!!!
+    const Container = styled.div`
 			margin-left: 5%;
 			padding-top: 10%;
 			margin-right: 15%;
@@ -45,7 +45,7 @@ class banner extends React.Component {
 			`}
 			${media.phone`
 			margin-left: 7%;
-			margin-top: 40%;
+			margin-top: 30%;
 			margin-right: 15%;
 			text-align : center 
 		`}
@@ -58,7 +58,7 @@ class banner extends React.Component {
 			`}
 		`;
 
-		const Title = styled.h3`
+    const Title = styled.h3`
 			width: 75%;
 			font-weight: bold; 
 			${media.desktop`
@@ -79,7 +79,7 @@ class banner extends React.Component {
 		`}
 		`;
 
-		const Description = styled.p`
+    const Description = styled.p`
 			color: #0e2f5a;	
 			${media.desktop`
 			font-size: 1.2em; 
@@ -95,7 +95,25 @@ class banner extends React.Component {
 		`}
 		`;
 
-		const Button = styled.button`
+    const Box = posed.div({
+      hoverable: true,
+      pressable: true,
+      init: {
+        paddingTop: "15px",
+        scale: 1,
+        boxShadow: "0px 0px 0px rgba(0,0,0,0)"
+      },
+      hover: {
+        scale: 1.2,
+        boxShadow: "0px 5px 10px rgba(0,0,0,0.2)"
+      },
+      press: {
+        scale: 1.1,
+        boxShadow: "0px 2px 5px rgba(0,0,0,0.1)"
+      }
+    });
+
+    const Button = styled(Box)`
 			background: #0748a8;
 			text-align: center;
 			border-radius: 5px;
@@ -123,82 +141,82 @@ class banner extends React.Component {
 		`}
 		`;
 
-		const Btns = styled.div`
-			${media.phone`
+    const Btns = styled.div`
+      ${media.phone`
 		padding-left: 5%;
 		`}
-			${media.medium`
+      ${media.medium`
 		padding-left: 7%;
 		`}
-		`;
+    `;
 
-		const StrtButton = styled.button`
-			background: #0078ff;
-			text-align: center;
-			border-radius: 5px;
-			height: 64px;
-			width: 42%;
-			border: 1px solid palevioletred;
-			color: white;
-			margin: 0 1em;
-			padding: 0.25em 1em;
-			font-size: 0.87em;
-			${media.phone`
+    const StrtButton = styled(Box)`
+      background: #0078ff;
+      text-align: center;
+      border-radius: 5px;
+      height: 64px;
+      width: 42%;
+      border: 1px solid palevioletred;
+      color: white;
+      margin: 0 1em;
+      padding: 0.25em 1em;
+      font-size: 0.87em;
+      ${media.phone`
 			width: 35%;
 			margin-top: 1%;
 			`}
-			${media.medium`
+      ${media.medium`
 			height: 50px;
 			width: 65%;
 				margin-top: 1%;
 			`}
-		`;
+    `;
 
-		const Div = styled.div`
-			width: 100%;
-			padding-top: 7%;
-			height: 70vh;
-			background: #f0f0d0;
-			max-width: 100%;
-			@media (max-width: 770px) {
-				height: 110vh;
-			}
-			@media (max-width: 450px) {
-				height: 100vh;
-			}
-		`;
+    const Div = styled.div`
+      width: 100%;
+      padding-top: 7%;
+      height: 70vh;
+      background: #f0f0d0;
+      max-width: 100%;
+      @media (max-width: 770px) {
+        height: 110vh;
+      }
+      @media (max-width: 450px) {
+        height: 100vh;
+      }
+    `;
 
-		return (
-			<Div>
-				<Grid stackable celled="internally" columns="equal">
-					<Grid.Column>
-						<Container>
-							<Title> Digital charging system for electric vehicles. </Title>
+    return (
+      <Div>
+        <Grid stackable celled="internally" columns="equal">
+          <Grid.Column>
+            <Container>
+              <Title> Digital charging system for electric vehicles. </Title>
 
-							<Description>
-								{' '}
-								EvoHub is a digital system built to make catering for Electric Vehicles easier for
-								Electric Vehicle Owners.{' '}
-							</Description>
-							<Btns>
-								<StrtButton> Get Started </StrtButton>
-								<Button> Learn More </Button>
-							</Btns>
-						</Container>
-					</Grid.Column>
-					<Grid.Column>
-						<Banner
-							unloader={<p> loading ... </p>}
-							loader={<p> not loading ... </p>}
-							src={[
-								'https://res.cloudinary.com/dkfptto8m/image/upload/v1558649119/Mongodb%20hackathon%20project/phone1.png',
-							]}
-						/>
-					</Grid.Column>
-				</Grid>
-			</Div>
-		);
-	}
+              <Description>
+                {" "}
+                EvoHub is a digital system built to make catering for Electric
+                Vehicles easier for Electric Vehicle Owners.{" "}
+              </Description>
+              <Btns>
+                <StrtButton> Get Started </StrtButton>
+                <Button> Learn More </Button>
+              </Btns>
+            </Container>
+          </Grid.Column>
+          <Grid.Column>
+            <Banner
+              unloader={<p> loading ... </p>}
+              loader={<p> not loading ... </p>}
+              src={[
+                "https://res.cloudinary.com/dkfptto8m/image/upload/v1558649119/Mongodb%20hackathon%20project/phone1.png"
+              ]}
+            />
+          </Grid.Column>
+        </Grid>
+      </Div>
+    );
+  }
 }
 
 export default banner;
