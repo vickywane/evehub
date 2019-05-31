@@ -199,11 +199,7 @@ class banner extends React.Component {
         height: 100vh;
       }
     `;
-    <Sidebar class="sidebar" initialPose="exit" pose="enter">
-      <h1>
-        <SplitText charPoses={charPoses}>Contaaaaaaaaessssnssts</SplitText>
-      </h1>
-    </Sidebar>;
+
     return (
       <Div>
         <Grid stackable celled="internally" columns="equal">
