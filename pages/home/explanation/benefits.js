@@ -6,6 +6,7 @@ import styled from "styled-components";
 import Flex from "styled-flex-component";
 import { media } from "../../media_style";
 import posed from "react-pose";
+import { Carousel } from "react-bootstrap";
 
 const Banner = styled(Img)`
   width: 45%;
@@ -13,10 +14,10 @@ const Banner = styled(Img)`
 `;
 
 const Container = styled.div`
-  height: 100vh;
+  height: 70vh;
   background: #0066f5;
   ${media.medium`
-	height: 185vh;
+	height: 130vh;
 	`}
 `;
 
@@ -144,124 +145,132 @@ export default function service() {
   return (
     <Container>
       <Title> FEATURES </Title>
-      <Text style={{ marginLeft: "5%", fontWeight: "bold" }}>
-        For Electric Vehicle Owners ;
-      </Text>
 
-      <Div>
-        <Grid
-          stackable
-          celled="internally"
-          columns="equal"
-          style={{ marginLeft: "5%", marginTop: "5%", color: "white" }}
-        >
-          <Grid.Row>
-            <Grid.Column>
-              <div>
-                <Flex column>
-                  <Icon name="facebook" size="big" color="red" />
-                  <Benefits>
-                    <Feature> Telematics </Feature>
-                    <Explain>
-                      {" "}
-                      Vehicle statistics all in your mobile device{" "}
-                    </Explain>
-                  </Benefits>
-                </Flex>
-              </div>
-            </Grid.Column>
+      <Carousel indicators={false} controls={false} pauseOnHover={false}>
+        <Carousel.Item>
+          <Text
+            style={{ margÌinLeft: "5%", fontWeight: "bold", marginTop: "5%" }}
+          >
+            For Electric Vehicle Owners ;
+          </Text>
+          <Div>
+            <Grid
+              stackable
+              celled="internally"
+              columns="equal"
+              style={{ marginLeft: "5%", marginTop: "5%", color: "white" }}
+            >
+              <Grid.Row>
+                <Grid.Column>
+                  <div>
+                    <Flex column>
+                      <Icon name="facebook" size="big" color="red" />
+                      <Benefits>
+                        <Feature> Telematics </Feature>
+                        <Explain>
+                          {" "}
+                          Vehicle statistics all in your mobile device{" "}
+                        </Explain>
+                      </Benefits>
+                    </Flex>
+                  </div>
+                </Grid.Column>
 
-            <Grid.Column>
-              <div style={{}}>
-                <Flex column>
-                  <Icon name="facebook" size="big" color="red" />
+                <Grid.Column>
+                  <div style={{}}>
+                    <Flex column>
+                      <Icon name="facebook" size="big" color="red" />
 
-                  <Benefits>
-                    <Feature> GeoSpatial Query</Feature>
-                    <Explain>
-                      {" "}
-                      By default all data is provided based on user location{" "}
-                    </Explain>
-                  </Benefits>
-                </Flex>
-              </div>
-            </Grid.Column>
+                      <Benefits>
+                        <Feature> GeoSpatial Query</Feature>
+                        <Explain>
+                          {" "}
+                          By default all data is provided based on user location{" "}
+                        </Explain>
+                      </Benefits>
+                    </Flex>
+                  </div>
+                </Grid.Column>
 
-            <Grid.Column>
-              <div style={{ marginRight: "5%" }}>
-                <Flex column>
-                  <Icon name="facebook" size="big" color="red" />
+                <Grid.Column>
+                  <div style={{ marginRight: "5%" }}>
+                    <Flex column>
+                      <Icon name="facebook" size="big" color="red" />
 
-                  <Benefits>
-                    <Feature> Payments</Feature>
-                    <Explain>Pay for your charge </Explain>
-                  </Benefits>
-                </Flex>
-              </div>
-            </Grid.Column>
-          </Grid.Row>
-        </Grid>
-      </Div>
+                      <Benefits>
+                        <Feature> Payments</Feature>
+                        <Explain>Pay for your charge </Explain>
+                      </Benefits>
+                    </Flex>
+                  </div>
+                </Grid.Column>
+              </Grid.Row>
+            </Grid>
+          </Div>
+        </Carousel.Item>
+        <Carousel.Item>
+          <Text
+            style={{ marginLeft: "5%", fontWeight: "bold", marginTop: "5%" }}
+          >
+            For Charging Station Owners ;
+          </Text>
 
-      <Text style={{ marginLeft: "5%", fontWeight: "bold", marginTop: "5%" }}>
-        For Charging Station Owners ;
-      </Text>
+          <Div>
+            <Grid
+              stackable
+              celled="internally"
+              columns="equal"
+              style={{ marginLeft: "5%", marginTop: "5%", color: "white" }}
+            >
+              <Grid.Row>
+                <Grid.Column>
+                  <div>
+                    <Flex column>
+                      <Icon name="facebook" size="big" color="red" />
+                      <Benefits>
+                        <Feature> Telematics </Feature>
+                        <Explain>
+                          {" "}
+                          Vehicle statistics all in your mobile device{" "}
+                        </Explain>
+                      </Benefits>
+                    </Flex>
+                  </div>
+                </Grid.Column>
 
-      <Div>
-        <Grid
-          stackable
-          celled="internally"
-          columns="equal"
-          style={{ marginLeft: "5%", marginTop: "5%", color: "white" }}
-        >
-          <Grid.Row>
-            <Grid.Column>
-              <div>
-                <Flex column>
-                  <Icon name="facebook" size="big" color="red" />
-                  <Benefits>
-                    <Feature> Telematics </Feature>
-                    <Explain>
-                      {" "}
-                      Vehicle statistics all in your mobile device{" "}
-                    </Explain>
-                  </Benefits>
-                </Flex>
-              </div>
-            </Grid.Column>
+                <Grid.Column>
+                  <div style={{}}>
+                    <Flex column>
+                      <Icon name="facebook" size="big" color="red" />
 
-            <Grid.Column>
-              <div style={{}}>
-                <Flex column>
-                  <Icon name="facebook" size="big" color="red" />
+                      <Benefits>
+                        <Feature> GeoSpatial Query</Feature>
+                        <Explain>
+                          {" "}
+                          By default all data is provided based on user location{" "}
+                        </Explain>
+                      </Benefits>
+                    </Flex>
+                  </div>
+                </Grid.Column>
 
-                  <Benefits>
-                    <Feature> GeoSpatial Query</Feature>
-                    <Explain>
-                      {" "}
-                      By default all data is provided based on user location{" "}
-                    </Explain>
-                  </Benefits>
-                </Flex>
-              </div>
-            </Grid.Column>
+                <Grid.Column>
+                  <div style={{ marginRight: "5%" }}>
+                    <Flex column>
+                      <Icon name="facebook" size="big" color="red" />
 
-            <Grid.Column>
-              <div style={{ marginRight: "5%" }}>
-                <Flex column>
-                  <Icon name="facebook" size="big" color="red" />
-
-                  <Benefits>
-                    <Feature> Payments</Feature>
-                    <Explain>Pay for your charge </Explain>
-                  </Benefits>
-                </Flex>
-              </div>
-            </Grid.Column>
-          </Grid.Row>
-        </Grid>
-      </Div>
-
+                      <Benefits>
+                        <Feature> Payments</Feature>
+                        <Explain>Pay for your charge </Explain>
+                      </Benefits>
+                    </Flex>
+                  </div>
+                </Grid.Column>
+              </Grid.Row>
+            </Grid>
+          </Div>
+        </Carousel.Item>
+      </Carousel>
       <Link href="../service/service">
         <Button>
           <StrtButton> Learn More </StrtButton>
