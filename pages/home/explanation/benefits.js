@@ -17,7 +17,7 @@ const Container = styled.div`
   height: 70vh;
   background: #0066f5;
   ${media.medium`
-	height: 130vh;
+	height: 80vh;
 	`}
 `;
 
@@ -95,7 +95,7 @@ const Explain = styled.p`
 `;
 
 const Button = styled.div`
-  margin-top: 2%;
+  margin-top: 4%;
   margin-right: 5%;
   text-align: right;
 `;

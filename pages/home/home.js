@@ -140,7 +140,7 @@ export default class Home extends Component {
         <div>
           <Update />
         </div>
-        <div style={{ backgroundColor: "#E0E4E8" }}>
+        <div>
           <br />
           <Message />
           <br />

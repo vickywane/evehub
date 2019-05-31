@@ -41,10 +41,10 @@ export default () => (
       </Container>
 
       <div>
-        <h4 style={{ textAlign: "center", marginTop: "2em" }}>
+        <h5 style={{ textAlign: "center", marginTop: "2em" }}>
           {" "}
           Copyright © {new Date().getFullYear()} . All rights reserved .
-        </h4>
+        </h5>
       </div>
     </Segment>
   </>
