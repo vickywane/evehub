@@ -47,12 +47,12 @@ const Box = posed.div({
   }
 });
 
-const Text = styled.h5`
+const Text = styled.p`
 	padding-left: 3%;
 	color: white;
 	${media.medium`
-	font-size : 1.1em
-	padding-left: 2.7%;
+	font-size : 0.7em
+	padding-left: 2%;
 	`}
 	${media.tablet`
 	font-size : 1.3em

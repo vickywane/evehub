@@ -69,12 +69,11 @@ export default class reset extends Component {
                     "  Let's get in touch , We'd love to recieve feedbacks from our users. "
                   }{" "}
                 </Header>
-                <Flex justifyCenter>
-                  <Icon name="facebook" size="big" color="blue" />
-                  <Icon name="twitter" size="big" color="blue" />
-                  <Icon name="instagram" size="big" color="red" />
-                  <Icon name="facebook" size="big" color="blue" />
-                  <Icon name="facebook" size="big" color="blue" />
+                <Flex justifyBetween>
+                  <Icon name="facebook" size="big" color="#1B1B1B#1B1B1B" />
+                  <Icon name="twitter" size="big" color="#1B1B1B" />
+                  <Icon name="instagram" size="big" color="#1B1B1B" />
+                  <Icon name="medium" size="big" color="#1B1B1B" />
                 </Flex>
               </Feeds>
             </Grid.Column>
